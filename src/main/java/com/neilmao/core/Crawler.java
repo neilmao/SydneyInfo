@@ -13,7 +13,7 @@ public interface Crawler {
 
     public void stop();
 
-    public void login();
+    public boolean login();
 
     public void execute();
 

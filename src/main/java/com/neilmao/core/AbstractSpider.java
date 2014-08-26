@@ -1,5 +1,6 @@
 package com.neilmao.core;
 
+import com.neilmao.tool.CharsetEncoding;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.http.HttpResponse;
@@ -14,8 +15,7 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.BasicHttpContext;
 import org.apache.http.protocol.HttpContext;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -33,10 +33,10 @@ public abstract class AbstractSpider {
     private HttpContext httpContext;
     private boolean active;
 
-    private String host;
-    private String login;
-    private String username;
-    private String password;
+    protected String host;
+    protected String login;
+    protected String username;
+    protected String password;
     private int timeout;
 
     protected Properties properties;
@@ -112,4 +112,17 @@ public abstract class AbstractSpider {
         return HttpClients.custom().setDefaultRequestConfig(requestConfig).build();
     }
 
+    /*
+     *  Extract HTML as string from response
+     */
+    protected String getHTMLFromResponse(HttpResponse response, CharsetEncoding encoding) throws IOException {
+        Reader reader = new InputStreamReader(response.getEntity().getContent(), encoding.toString());
+        BufferedReader bufferedReader = new BufferedReader(reader);
+        StringBuilder sb = new StringBuilder();
+        String buffer;
+        while ((buffer = bufferedReader.readLine()) != null) {
+            sb.append(buffer).append("\n");
+        }
+        return sb.toString();
+    }
 }
