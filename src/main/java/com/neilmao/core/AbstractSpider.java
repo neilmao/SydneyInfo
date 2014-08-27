@@ -5,11 +5,14 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
+import org.apache.http.client.CookieStore;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.protocol.HttpClientContext;
+import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.BasicHttpContext;
@@ -53,7 +56,10 @@ public abstract class AbstractSpider {
      *  default settings for Spiders, override this method to change settings
      */
     protected void init(String configFile) {
-        this.httpContext = new BasicHttpContext();
+        httpContext = new BasicHttpContext();
+        CookieStore cookieStore = new BasicCookieStore();
+        httpContext.setAttribute(HttpClientContext.COOKIE_STORE, cookieStore);
+
         // apply default settings
         this.timeout = 10 * 1000;
 
@@ -83,7 +89,9 @@ public abstract class AbstractSpider {
      * Send get request
      */
     protected HttpResponse getRequest(String link, String paramStr) throws IOException {
-        HttpGet get = new HttpGet(link + "?" + paramStr);
+        if (paramStr != null)
+            link = link + "?" + paramStr;
+        HttpGet get = new HttpGet(link);
         return getHttpClient().execute(get, httpContext);
     }
 
@@ -92,11 +100,13 @@ public abstract class AbstractSpider {
     */
     protected HttpResponse postRequest(String link, Map<String, String> params) throws IOException {
         HttpPost post = new HttpPost(link);
-        List<NameValuePair> nvps = new LinkedList<NameValuePair>();
-        for (Map.Entry<String, String> entry : params.entrySet()) {
-            nvps.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
+        if (params != null) {
+            List<NameValuePair> nvps = new LinkedList<NameValuePair>();
+            for (Map.Entry<String, String> entry : params.entrySet()) {
+                nvps.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
+            }
+            post.setEntity(new UrlEncodedFormEntity(nvps));
         }
-        post.setEntity(new UrlEncodedFormEntity(nvps));
         return getHttpClient().execute(post, httpContext);
     }
 
@@ -124,5 +134,9 @@ public abstract class AbstractSpider {
             sb.append(buffer).append("\n");
         }
         return sb.toString();
+    }
+
+    public HttpContext getHttpContext() {
+        return httpContext;
     }
 }

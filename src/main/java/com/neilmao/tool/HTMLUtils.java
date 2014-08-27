@@ -18,7 +18,7 @@ public class HTMLUtils {
         if (!includeStart)
             startStr.length();
 
-        int end = str.indexOf(endStr, start) - 1;
+        int end = str.indexOf(endStr, start);
         if (includeEnd)
             end += endStr.length();
 
