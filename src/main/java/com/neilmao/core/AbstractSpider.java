@@ -29,7 +29,7 @@ import java.util.Properties;
  * User: neilmao
  * Date: 22/08/2014
  */
-public abstract class AbstractSpider {
+public abstract class AbstractSpider implements Crawler {
 
     private static Log LOG = LogFactory.getLog(AbstractSpider.class);
 

@@ -2,23 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d71dbd1d-17e5-4deb-96d0-3725f012c3ea" name="Default" comment="start coding login to TigTag">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/neilmao/web/HelloController.java" afterPath="$PROJECT_DIR$/src/main/java/com/neilmao/web/HelloController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/TigTagSettings.properties" afterPath="$PROJECT_DIR$/src/main/resources/TigTagSettings.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/findbugs-idea.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/neilmao/core/TigtagSpider.java" afterPath="$PROJECT_DIR$/src/main/java/com/neilmao/core/TigTagSpider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/neilmao/core/AbstractSpider.java" afterPath="$PROJECT_DIR$/src/main/java/com/neilmao/core/AbstractSpider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SydneyInfo.iml" afterPath="$PROJECT_DIR$/SydneyInfo.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SydneyInfo.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d71dbd1d-17e5-4deb-96d0-3725f012c3ea" time="1409142747924" ignored="false" />
+    <file path="/Dummy.txt" changelist="d71dbd1d-17e5-4deb-96d0-3725f012c3ea" time="1409292927222" ignored="false" />
     <file path="/pom.xml" changelist="d71dbd1d-17e5-4deb-96d0-3725f012c3ea" time="1408625672600" ignored="false" />
     <file path="/fragment.java" changelist="d71dbd1d-17e5-4deb-96d0-3725f012c3ea" time="1409060564479" ignored="false" />
     <file path="/Spider.java" changelist="d71dbd1d-17e5-4deb-96d0-3725f012c3ea" time="1408714708113" ignored="false" />
-    <file path="/AbstractSpider.java" changelist="d71dbd1d-17e5-4deb-96d0-3725f012c3ea" time="1409142365897" ignored="false" />
+    <file path="/AbstractSpider.java" changelist="d71dbd1d-17e5-4deb-96d0-3725f012c3ea" time="1409294005407" ignored="false" />
     <file path="$PROJECT_DIR$/src/main/java/com/neilmao/core/Crawl.java" changelist="d71dbd1d-17e5-4deb-96d0-3725f012c3ea" time="1408713890783" ignored="false" />
     <file path="/TigtagSpider.java" changelist="d71dbd1d-17e5-4deb-96d0-3725f012c3ea" time="1408722003083" ignored="false" />
     <file path="/Crawler.java" changelist="d71dbd1d-17e5-4deb-96d0-3725f012c3ea" time="1409061473839" ignored="false" />
     <file path="/TigTagSettings.properties" changelist="d71dbd1d-17e5-4deb-96d0-3725f012c3ea" time="1409134936773" ignored="false" />
     <file path="/ApplicationContext.xml" changelist="d71dbd1d-17e5-4deb-96d0-3725f012c3ea" time="1408798021273" ignored="false" />
-    <file path="/HelloController.java" changelist="d71dbd1d-17e5-4deb-96d0-3725f012c3ea" time="1408797003333" ignored="false" />
+    <file path="/HelloController.java" changelist="d71dbd1d-17e5-4deb-96d0-3725f012c3ea" time="1409292704172" ignored="false" />
     <file path="/TigTagSpider.java" changelist="d71dbd1d-17e5-4deb-96d0-3725f012c3ea" time="1409135238139" ignored="false" />
     <file path="/mvc-dispatcher-servlet.xml" changelist="d71dbd1d-17e5-4deb-96d0-3725f012c3ea" time="1408791971715" ignored="false" />
     <file path="/File Header.txt.ft" changelist="d71dbd1d-17e5-4deb-96d0-3725f012c3ea" time="1409057710834" ignored="false" />
@@ -39,6 +41,8 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -75,8 +79,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -86,10 +88,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="HelloController.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="HelloController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/neilmao/web/HelloController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="17" selection-start="522" selection-end="522" vertical-scroll-proportion="0.34351146">
+            <state line="21" column="1" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,34 +100,7 @@
       <file leaf-file-name="TigTagSettings.properties" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/TigTagSettings.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="56" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="42" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mvc-dispatcher-servlet.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="11" selection-start="710" selection-end="710" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SydneyInfo.iml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SydneyInfo.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="22" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.0">
+            <state line="3" column="9" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -143,16 +118,16 @@
       <file leaf-file-name="HTMLUtils.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/neilmao/tool/HTMLUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="85" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0">
+            <state line="27" column="55" selection-start="833" selection-end="833" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TigTagSpiderTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/neilmao/core/TigTagSpiderTest.java">
+      <file leaf-file-name="AbstractSpider.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/neilmao/core/AbstractSpider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="34" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
+            <state line="31" column="52" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -161,21 +136,26 @@
       <file leaf-file-name="TigTagSpider.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/neilmao/core/TigTagSpider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="75" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="34" column="42" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractSpider.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/neilmao/core/AbstractSpider.java">
+      <file leaf-file-name="Crawler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/neilmao/core/Crawler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="69" selection-start="3615" selection-end="3615" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="11" column="33" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TigTagSpiderTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/neilmao/core/TigTagSpiderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="58" selection-start="411" selection-end="411" vertical-scroll-proportion="0.44520548">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -198,13 +178,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/neilmao/HelloController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/neilmao/core/Crawl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neilmao/core/Spider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neilmao/core/TigtagSpider.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/ApplicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/neilmao/web/HelloController.java" />
         <option value="$PROJECT_DIR$/SydneyInfo.iml" />
         <option value="$PROJECT_DIR$/src/main/java/com/neilmao/core/Encoding.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -213,9 +190,10 @@
         <option value="$PROJECT_DIR$/src/test/java/com/neilmao/core/TigTagSpiderTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neilmao/core/HTMLUtils.java" />
         <option value="$PROJECT_DIR$/src/main/resources/TigTagSettings.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/neilmao/core/TigTagSpider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neilmao/tool/HTMLUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/neilmao/web/HelloController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neilmao/core/AbstractSpider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/neilmao/core/TigTagSpider.java" />
       </list>
     </option>
   </component>
@@ -244,10 +222,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="66" />
-    <option name="y" value="22" />
-    <option name="width" value="1674" />
-    <option name="height" value="977" />
+    <option name="x" value="64" />
+    <option name="y" value="-4" />
+    <option name="width" value="1857" />
+    <option name="height" value="1085" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -256,6 +234,8 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="Undo Check Out" />
+    <OptionsSetting value="true" id="Get Latest Version" />
     <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
@@ -280,7 +260,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -530,6 +509,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -545,6 +525,7 @@
     <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="208" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="997" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="996" />
@@ -875,31 +856,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="66" y="22" width="1674" height="977" extended-state="0" />
-    <editor active="false" />
+    <frame x="64" y="-4" width="1857" height="1085" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24949014" sideWeight="0.6589327" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3395566" sideWeight="0.9993202" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.9993202" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32905483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867885" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32788798" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946634" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970768" sideWeight="0.6589327" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32970768" sideWeight="0.6589327" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25061426" sideWeight="0.67094517" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298153" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2504155" sideWeight="0.670247" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975295" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -976,37 +958,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/neilmao/web/HelloController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="20" selection-start="473" selection-end="473" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="50" selection-start="702" selection-end="702" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="44" selection-start="181" selection-end="181" vertical-scroll-proportion="0.13062409" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="18" selection-start="1511" selection-end="1511" vertical-scroll-proportion="-16.04142">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
       </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
@@ -1018,30 +974,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="11" selection-start="710" selection-end="710" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hello.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="18" selection-start="50" selection-end="50" vertical-scroll-proportion="0.076238886">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SydneyInfo.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="22" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/src.zip!/org/omg/IOP/Encoding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="19" selection-start="258" selection-end="258" vertical-scroll-proportion="0.21216407" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/neilmao/tool/CharsetEncoding.java">
@@ -1051,83 +988,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="42" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/neilmao/core/Crawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="3" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/neilmao/core/TigTagSpiderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="34" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.3.5/httpclient-4.3.5-sources.jar!/org/apache/http/client/entity/UrlEncodedFormEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="34" selection-start="3521" selection-end="3521" vertical-scroll-proportion="0.53473943">
-          <folding />
-        </state>
+        <state line="88" column="34" selection-start="3521" selection-end="3521" vertical-scroll-proportion="0.53473943" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.3.5/httpclient-4.3.5-sources.jar!/org/apache/http/client/methods/HttpGet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="0" selection-start="2242" selection-end="2242" vertical-scroll-proportion="0.5631068">
+        <state line="68" column="0" selection-start="2242" selection-end="2242" vertical-scroll-proportion="0.5631068" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/neilmao/web/HelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="1" selection-start="625" selection-end="625" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/src.zip!/java/lang/String.java">
+    <entry file="file://$PROJECT_DIR$/.idea/findbugs-idea.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1911" column="88" selection-start="75621" selection-end="75621" vertical-scroll-proportion="0.77047145">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="40" selection-start="720" selection-end="720" vertical-scroll-proportion="0.23972602">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/neilmao/tool/HTMLUtils.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="85" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0">
+        <state line="53" column="75" selection-start="2042" selection-end="2042" vertical-scroll-proportion="0.46614873">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/TigTagSettings.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="9" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/neilmao/core/AbstractSpider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="69" selection-start="3615" selection-end="3615" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="31" column="52" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/neilmao/core/Crawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="33" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/neilmao/core/TigTagSpider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="75" selection-start="1401" selection-end="1401" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/TigTagSettings.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="56" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
+        <state line="34" column="42" selection-start="774" selection-end="774" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/neilmao/web/HelloController.java">
+    <entry file="file://$PROJECT_DIR$/SydneyInfo.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="17" selection-start="522" selection-end="522" vertical-scroll-proportion="0.34351146">
+        <state line="122" column="78" selection-start="7725" selection-end="7725" vertical-scroll-proportion="2.089041">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/neilmao/tool/HTMLUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="55" selection-start="833" selection-end="833" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/neilmao/core/TigTagSpiderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="58" selection-start="411" selection-end="411" vertical-scroll-proportion="0.44520548">
           <folding />
         </state>
       </provider>

@@ -18,7 +18,7 @@ import java.util.Map;
  * Date: 22/08/2014
  */
 @Component
-public class TigTagSpider extends AbstractSpider implements Crawler{
+public class TigTagSpider extends AbstractSpider {
 
     private static Log LOG = LogFactory.getLog(TigTagSpider.class);
 
