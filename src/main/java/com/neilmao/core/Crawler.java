@@ -1,5 +1,7 @@
 package com.neilmao.core;
 
+import java.io.IOException;
+
 /**
  * Created with IntelliJ IDEA.
  * User: neilmao
@@ -13,7 +15,7 @@ public interface Crawler {
 
     public void stop();
 
-    public boolean login();
+    public boolean login() throws IOException;
 
     public void execute();
 
