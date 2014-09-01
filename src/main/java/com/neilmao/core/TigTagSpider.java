@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.Reader;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -28,7 +27,12 @@ public class TigTagSpider extends AbstractSpider {
 
     private static Log LOG = LogFactory.getLog(TigTagSpider.class);
 
-    private final CharsetEncoding encoding = CharsetEncoding.GBK;
+    private final CharsetEncoding ENCODING = CharsetEncoding.GBK;
+
+    private final String VERIFICATION_IMAGE_FILENAME = "verificationImage.png";
+
+    private String idhash;
+    private String referer;
 
     public TigTagSpider() {
         init();
@@ -53,7 +57,7 @@ public class TigTagSpider extends AbstractSpider {
 
         try {
             response =  postRequest(host + login, params);
-            html = getHTMLFromResponse(response, encoding);
+            html = getHTMLFromResponse(response, ENCODING);
         } catch (IOException ex) {
             LOG.error("Logging failed:" + ex.toString());
             return false;
@@ -62,20 +66,20 @@ public class TigTagSpider extends AbstractSpider {
         String redirectLink =  HTMLUtils.extractBetween(html, "member.php?", true, "'", false);
         try {
             response = getRequest(host + redirectLink, null);
-            html = getHTMLFromResponse(response, encoding);
+            html = getHTMLFromResponse(response, ENCODING);
         } catch (IOException ex) {
             LOG.error("Redirecting failed:" + ex.toString());
             return false;
         }
         //LOG.info(html);
         // extract idhash
-        String idhash = HTMLUtils.extractBetween(html, "onclick=\"updateseccode('", false, "'", false);
+        idhash = HTMLUtils.extractBetween(html, "onclick=\"updateseccode('", false, "'", false);
         // load image html
         String imgReqLink = host + "misc.php?mod=seccode&action=update&idhash=" + idhash +
                 "&inajax=1&ajaxtarget=seccode_" + idhash;
         try {
             response = getRequest(imgReqLink, "referer=" + host + redirectLink);
-            html = getHTMLFromResponse(response, encoding);
+            html = getHTMLFromResponse(response, ENCODING);
         } catch (IOException e) {
             LOG.error("Failed to send request to get image link.");
         }
@@ -89,30 +93,42 @@ public class TigTagSpider extends AbstractSpider {
         }
 
         imgLink = host + imgLink;
-        String referer = host + redirectLink;
+        referer = host + redirectLink;
 
         RequestConfig config = RequestConfig.custom().
-                setConnectionRequestTimeout(default_download_timeout).
-                setSocketTimeout(default_download_timeout).
-                setConnectTimeout(default_download_timeout).
+                setConnectionRequestTimeout(DEFAULT_DOWNLOAD_TIMEOUT).
+                setSocketTimeout(DEFAULT_DOWNLOAD_TIMEOUT).
+                setConnectTimeout(DEFAULT_DOWNLOAD_TIMEOUT).
                 build();
 
         Map<String, String> headers = new LinkedHashMap<>();
         headers.put(HttpHeaders.REFERER, referer);
 
         try {
-            downloadFile(imgLink, null, "img.png", config, headers);
+            downloadFile(imgLink, null, VERIFICATION_IMAGE_FILENAME, config, headers);
             LOG.info("Verification image fetched.");
         } catch (IOException e) {
             LOG.error("Downloading verification image failed.");
             return false;
         }
 
-        // type verification code
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String code = reader.readLine();
-
         return true;
+    }
+
+    public boolean typeVerificationCode(String code) throws IOException {
+        // send xhr to check code
+        String checkURL = host + "misc.php?mod=seccode&action=check&inajax=1&&idhash=" + idhash + "&secverify=" + code;
+
+        Map<String, String> headers = new LinkedHashMap<>();
+        headers.put(HttpHeaders.REFERER, referer);
+
+        HttpResponse response = getRequest(checkURL, null, null, headers);
+
+        String html = getHTMLFromResponse(response, ENCODING);
+        if (html.contains("[succeed]"))
+            return true;
+        else
+            return false;
     }
 
     @Override
@@ -132,6 +148,6 @@ public class TigTagSpider extends AbstractSpider {
 
     @Override
     protected CharsetEncoding getEncoding() {
-        return this.encoding;
+        return this.ENCODING;
     }
 }

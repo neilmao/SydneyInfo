@@ -4,8 +4,6 @@ import com.neilmao.tool.CharsetEncoding;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.http.Header;
-import org.apache.http.HttpHeaders;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.CookieStore;
@@ -16,7 +14,6 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.impl.client.BasicCookieStore;
-import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.BasicHttpContext;
@@ -38,8 +35,9 @@ public abstract class AbstractSpider implements Crawler {
 
     private static Log LOG = LogFactory.getLog(AbstractSpider.class);
 
-    protected final int default_download_timeout = 20 * 1000;
-    protected final int default_connection_timeout = 10 * 1000;
+    protected final int DEFAULT_DOWNLOAD_TIMEOUT = 20 * 1000;
+    protected final int DEFAULT_CONNECTION_TIMEOUT = 10 * 1000;
+    protected final String SYSTEM_TEMP_FOLDER_KEY = "java.io.tmpdir";
 
     private HttpContext httpContext;
     private boolean active;
@@ -163,19 +161,20 @@ public abstract class AbstractSpider implements Crawler {
      * Download a file from
      * @param link
      * and save to
-     * @param path
+     * @param fileName
      *
      * @param paramStr optional params
      */
-    protected void downloadFile(String link, String paramStr, String path, RequestConfig config, Map<String, String> headers) throws IOException {
+    protected void downloadFile(String link, String paramStr, String fileName, RequestConfig config, Map<String, String> headers) throws IOException {
         LOG.info("Downloading file from " + link);
 
-        FileOutputStream outputStream = new FileOutputStream(path);
+        FileOutputStream outputStream = new FileOutputStream(getTempFolder() + fileName);
 
         InputStream inputStreams = getRequest(link, paramStr, config, headers).getEntity().getContent();
 
         byte[] content = IOUtils.toByteArray(inputStreams);
         IOUtils.write(content, outputStream);
+        LOG.info("File saved to " + getTempFolder() + fileName);
     }
 
     /**
@@ -184,9 +183,9 @@ public abstract class AbstractSpider implements Crawler {
     private HttpClient getHttpClient(RequestConfig config) {
         if (config == null) {
             config = RequestConfig.custom().
-                    setConnectionRequestTimeout(default_connection_timeout).
-                    setConnectionRequestTimeout(default_connection_timeout).
-                    setSocketTimeout(default_connection_timeout).build();
+                    setConnectionRequestTimeout(DEFAULT_CONNECTION_TIMEOUT).
+                    setConnectionRequestTimeout(DEFAULT_CONNECTION_TIMEOUT).
+                    setSocketTimeout(DEFAULT_CONNECTION_TIMEOUT).build();
         }
         return HttpClients.custom().setDefaultRequestConfig(config).build();
     }
@@ -209,5 +208,9 @@ public abstract class AbstractSpider implements Crawler {
 
     public HttpContext getHttpContext() {
         return httpContext;
+    }
+
+    public String getTempFolder() {
+        return System.getProperty(SYSTEM_TEMP_FOLDER_KEY);
     }
 }
