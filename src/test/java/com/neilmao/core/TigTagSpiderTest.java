@@ -3,10 +3,6 @@ package com.neilmao.core;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
-import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
 
 /**
@@ -29,12 +25,5 @@ public class TigTagSpiderTest {
     public void testLogin() throws Exception {
 
         assertTrue(spider.login());
-
-        //System.setIn(System.in);
-        //BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
-        //String code = System.console().readLine();
-
-        //assertTrue(spider.typeVerificationCode(code));
     }
 }

@@ -8,11 +8,8 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.http.HttpHeaders;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.config.RequestConfig;
-import org.springframework.stereotype.Component;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -22,7 +19,6 @@ import java.util.Map;
  * User: neilmao
  * Date: 22/08/2014
  */
-@Component
 public class TigTagSpider extends AbstractSpider {
 
     private static Log LOG = LogFactory.getLog(TigTagSpider.class);
