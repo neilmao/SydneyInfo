@@ -1,4 +1,4 @@
-package com.neilmao.web;
+package neilmao.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

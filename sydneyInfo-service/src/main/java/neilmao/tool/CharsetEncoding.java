@@ -1,4 +1,4 @@
-package com.neilmao.tool;
+package neilmao.tool;
 
 /**
  * Created with IntelliJ IDEA.

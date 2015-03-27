@@ -1,4 +1,4 @@
-package com.neilmao.core;
+package neilmao.core;
 
 import java.io.IOException;
 

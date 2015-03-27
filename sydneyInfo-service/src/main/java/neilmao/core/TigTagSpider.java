@@ -1,8 +1,8 @@
-package com.neilmao.core;
+package neilmao.core;
 
 
-import com.neilmao.tool.CharsetEncoding;
-import com.neilmao.tool.HTMLUtils;
+import neilmao.tool.CharsetEncoding;
+import neilmao.tool.HTMLUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.http.HttpHeaders;

@@ -1,6 +1,6 @@
-package com.neilmao.web.spider;
+package neilmao.web.spider;
 
-import com.neilmao.core.TigTagSpider;
+import neilmao.core.TigTagSpider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

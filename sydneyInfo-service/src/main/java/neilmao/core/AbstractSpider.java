@@ -1,6 +1,6 @@
-package com.neilmao.core;
+package neilmao.core;
 
-import com.neilmao.tool.CharsetEncoding;
+import neilmao.tool.CharsetEncoding;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
